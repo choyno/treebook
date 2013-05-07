@@ -17,5 +17,5 @@ body {
 	padding-top: 40px;
 }
 
-.page-header .admin { display: none;}
-.page-header:hover .admin { display:inline;}
+ .status .admin  { display: none;}
+ .status.hover .admin { display:inline;}

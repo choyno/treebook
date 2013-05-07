@@ -3,19 +3,23 @@
 
 
 <br/> 
+
   <% @statuses.each do |status| %>
-    <div class="page-header">
-      <h3><%= status.name%></h3>
-      <p><%= status.content%></p>
-      <div>
-        <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
-        <span class="admin">
-          <%= link_to 'Edit', edit_status_path(status) %> |
-          <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </span>
-      </div>
+    <div class="page-header"> 
+        <div  class="status">
+          <h3><%= status.user.full_name %></h3>
+          <p><%= status.content%></p>
+          <div>
+            <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
+            <span class="admin">
+              <%= link_to 'Edit', edit_status_path(status) %> |
+              <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </span>
+          </div>
+        </div>
     </div>
   <% end %> 
+
 <br />
 
 
